@@ -1,3 +1,10 @@
+<?php 
+# includes
+foreach (glob("inc/*.php") as $filename)
+{
+    include $filename;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,20 +20,7 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<div class="header">
-	<div class="navbar">
-		<div class="logo">
-			<a href="index.php">Eddy Vinck</a>
-		</div>
-		<div class="navigation">
-			<a href="">Projects</a>
-			<a href="">Skills</a>
-			<a href="">Stuff</a>
-			<a href="">Language</a>
-			<a href="">Contact Me!</a>
-		</div>		
-	</div>
-</div>
+<?php newHeader(); ?>
 <div class="nav-bullets">
 <ul>
 	<li><a href="#"></a></li>
