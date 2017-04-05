@@ -100,7 +100,7 @@ p {
     justify-content: space-between;
     align-items: center;
     height: 60vh;
-    width: 67vw;
+    width: 1200px;
     margin: 50px auto;
     text-align: center;
     
@@ -256,9 +256,9 @@ p {
     background-image: url("../img/csharp2.jpg");
     background-size: cover;
 }
-.csharp .section-content {
+/*.csharp .section-content {
     width: 71vw;
-}
+}*/
 .csharp .section-title {
     color: white;
 }
@@ -357,6 +357,14 @@ p {
 }
 
 /* Responsiveness starts here */
+
+/* screens with a width more than 1600 px */
+@media (min-width: 1600px) {
+    .section-content {
+        justify-content: space-around;
+    }
+
+}
 
 /* half of the screen(windowskey + left/right) */
 @media all and (min-width: 200px) 
