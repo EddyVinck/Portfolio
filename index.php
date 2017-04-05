@@ -3,11 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Eddy Vinck</title>		
-	<meta name="keywords" content="Portfolio Eddy Vinck "/>
-	<meta name="description" content="Deze pagina is een index van de klassen 16AOA en 16AOB van het ICT-College ROC-ter-AA"/>
-	<meta name="student" content="Eddy Vinck"/>
-	<meta name="class" content="16AOB"/>
-	<link rel="icon" href="img/icon.png">
+	<meta name="keywords" content="Portfolio Eddy Vinck, Web design, web development "/>
+	<meta name="description" content="Het online portfolio van Eddy Vinck. Bekijk de projecten waar ik aan heb gewerkt."/>
+	<link rel="icon" href="img/ico.png">
 	<?php // You need to use the viewport meta tag or else the browser will try to shrink your page 1:1?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
@@ -20,10 +18,9 @@
 		</div>
 		<div class="navigation">
 			<a href="">Projects</a>
-			<a href="">Skills</a>
-			<a href="">Stuff</a>
+			<a href="">Skills</a>			
 			<a href="">Language</a>
-			<a href="">Contact Me!</a>
+			<a href="">Contact</a>
 		</div>		
 	</div>
 </div>
@@ -50,11 +47,11 @@
 	</div>
 	<div class="section-content">
 		<div class="section-text">
-			<p>Dit project is een webwinkel en radio-website in een. Dit was de eerste keer dat we met een MySQL database hebben gewerkt.</p>
+			<p>Dit is een webwinkel en radio-website in een project. Dit was de eerste keer dat we met een MySQL database hebben gewerkt.</p>
 		</div>	
 		<div class="img-showcase">
-			<img src="img/IE-games.png">
-			<img src="img/IE-radio.png">
+			<img src="img/IE-games.jpg">
+			<img src="img/IE-radio.jpg">
 		</div>
 	</div>
 </div>
@@ -64,7 +61,7 @@
 	</div>
 	<div class="section-content">			
 		<div class="img-showcase">
-			<img src="img/pepe-vault.png">
+			<img src="img/pepe-vault.jpg">
 		</div>
 		<div class="section-text">
 			<p>Met dit project waarbij we een kluis maakten, raakten we voor het eerst in aanraking met wat meer 'echt' JavaScript. Het was meer dan simpele HTML elementen beïnvloeden.</p>
@@ -80,7 +77,7 @@
 			<p>Voor de top 2000 moesten we een database gebruiken en MySQL queries aanpassen naar zoekopdrachten. Styling was niet zo belangrijk, want het ging puur om functionaliteit.</p>
 		</div>			
 		<div class="img-showcase">
-			<img src="img/top2000.png">
+			<img src="img/top2000.jpg">
 		</div>
 	</div>
 </div>
@@ -90,7 +87,7 @@
 	</div>
 	<div class="section-content">			
 		<div class="img-showcase">
-			<img src="img/guestbook2.png">
+			<img src="img/guestbook2.jpg">
 		</div>
 		<div class="section-text">
 			<p>De opdracht was simpel: maak een gastenboek waarin berichten in een database komen te staan. Iets te simpel, vond ik, dus heb ik het mogelijk gemaakt om op posts te reageren en ik heb veel gefocused op de styling.</p>
@@ -103,7 +100,7 @@
 	</div>
 	<div class="section-content">
 		<div class="section-text">
-			<p>Met C# hebben we verschillende projecten uitgevoerd. Ik heb een twee spelletjes gemaakt: Raad Het Getal en Dragrace. Met Dragrace hebben we geleerd Object-Oriented te programmeren.</p>
+			<p>Met C# hebben we verschillende projecten uitgevoerd. Ik heb twee spelletjes gemaakt: Raad Het Getal en Dragrace. Met Dragrace hebben we geleerd Object-Oriented te programmeren.</p>
 		</div>			
 		<div class="img-showcase">
 			<img src="img/csharp-projects.jpg">
@@ -123,9 +120,11 @@
 			<img src="img/icons/css3/css3-original-wordmark.svg">
 			<img src="img/icons/javascript/javascript-original.svg">
 			<img src="img/icons/php/php-original.svg">
-			<img src="img/icons/mysql/mysql-original-wordmark.svg">
-			<img src="img/icons/csharp/csharp-original.svg">
+			<img src="img/icons/mysql/mysql-original-wordmark.svg">			
 			<img src="img/icons/photoshop/photoshop-plain.svg">
+			<img src="img/icons/git/git-original-wordmark.svg">
+			<img src="img/icons/github/github-original-wordmark.svg">
+			<img src="img/icons/csharp/csharp-original.svg">
 		</div>	
 	</div>
 </div>
