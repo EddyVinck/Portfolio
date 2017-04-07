@@ -1,6 +1,7 @@
 <?php
 $msg = '';
 $msgClass = '';
+
 // check for submit 
 	if(filter_has_var(INPUT_POST, 'submit')){
 		// get form data
@@ -17,8 +18,7 @@ $msgClass = '';
 					$msgIcon = 'fa-warning';
 					$msgClass = 'failed';
 				} 
-				else {
-					
+				else {					
 					$toEmail = "eddyvinck95@gmail.com";
 					$subject = "Contact Request from ".$name;
 					$body = '<h2>Contact Request</h2>
@@ -31,7 +31,7 @@ $msgClass = '';
 					$headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
 
 					// additional headers
-					$headers .= "From: ".$name."<".$email.">"."\r\n";
+					$headers .= "From: ".$name." through <77712.rocteraa-student.nl>"."\r\n";
 
 					if(mail($toEmail, $subject, $body, $headers)){
 						// success
@@ -44,7 +44,6 @@ $msgClass = '';
 						$msgIcon = 'fa-warning';
 						$msgClass = 'failed';
 					}
-
 				}
 			}
 		else {
@@ -199,7 +198,7 @@ $msgClass = '';
 			""; ?>">
 			<input type="text" name="email" placeholder="Your Email" value="<?php echo isset($_POST['email']) ? $email : 
 			""; ?>">
-			<textarea type="text" name="message" placeholder="Your Message..."><?php echo isset($_POST['email']) ? $email : 
+			<textarea type="text" name="message" placeholder="Your Message..." ><?php echo isset($_POST['message']) ? $message : 
 			""; ?></textarea>
 			<button name="submit" type="submit">SEND</button>
 		</form>		
