@@ -9,6 +9,7 @@ Header:
 - bg img color overlay: eaeaea;
 - new bg color 28FC9B
 */
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 body {
     margin: 0;
     background-color: #d8d7ce;
@@ -354,38 +355,48 @@ p {
 .contact .input-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     /*height: 50%;*/
     /*justify-content: space-between;*/
 }
-.contact .section-content input {
+.contact .section-content input, textarea {
     border: 3px solid #28fc5f;
     background: rgba(185,235,187,0.5);
     padding: 10px;
-    width: 300px;
+    width: 320px;
+    /*height: 40px;*/
     color: white;
     font-weight: bold;
     font-family: sans-serif;
     outline-width: 0;
     margin-bottom: 10px;
+    box-sizing: border-box;
+    min-height: 40px;
+    max-height: 205px;
+}
+.contact .section-content  textarea {
+    resize: vertical;
+    height: 16px;
 }
 .contact .section-content button {
     border: none;
     border-radius: 6px;
     background: #28fc5f;
     padding: 30px;
-    width: 300px;
+    width: 320px;
     color: white;
     font-weight: bold;
     font-family: sans-serif;
     outline-width: 0;
     font-size: 24px;
     transition: 0.2s;
+    box-sizing: border-box;
 }
 .contact .section-content button:hover {
     background-color: green;
     cursor: pointer;
 }
-.contact .section-content input::placeholder {
+.contact .section-content input::placeholder, textarea::placeholder {
     color: white;
     font-family: sans-serif;
     font-weight: bold;  
@@ -393,6 +404,25 @@ p {
 .flex--column {
     flex-direction: column;
     align-items: center;
+}
+.alert {
+    padding: 10px;
+    width: 320px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.check {
+    background-color: #93EDAB;
+    border: 2px solid green;
+    color: green;
+}
+.failed {
+    background-color: #ED9393;
+    border: 2px solid #B83737;
+    color: #B83737;
 }
 
 footer {

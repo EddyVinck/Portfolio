@@ -1,3 +1,60 @@
+<?php
+$msg = '';
+$msgClass = '';
+// check for submit 
+	if(filter_has_var(INPUT_POST, 'submit')){
+		// get form data
+		$name = htmlspecialchars($_POST['name']);
+		$email = htmlspecialchars($_POST['email']);
+		$message = htmlspecialchars($_POST['message']);
+
+		// check required fields
+		if (!empty($name) && !empty($email) && !empty($message)) {
+				// fields are not empty
+				if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+					//failed
+					$msg = ' Vul een correct email adres in.';
+					$msgIcon = 'fa-warning';
+					$msgClass = 'failed';
+				} 
+				else {
+					
+					$toEmail = "eddyvinck95@gmail.com";
+					$subject = "Contact Request from ".$name;
+					$body = '<h2>Contact Request</h2>
+					<h4>Name</h4><p>'.$name.'</p>
+					<h4>Email</h4><p>'.$email.'</p>
+					<h4>Message</h4><p>'.$message.'</p>';
+
+					// email headers
+					$headers = "MIME-Version 1.0"."\r\n";
+					$headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
+
+					// additional headers
+					$headers .= "From: ".$name."<".$email.">"."\r\n";
+
+					if(mail($toEmail, $subject, $body, $headers)){
+						// success
+						$msg = ' Bericht verstuurd.';
+						$msgIcon = 'fa-check';
+						$msgClass = 'check';
+					} else {
+						// failed
+						$msg = ' Uw email is niet verzonden.';
+						$msgIcon = 'fa-warning';
+						$msgClass = 'failed';
+					}
+
+				}
+			}
+		else {
+			// failed
+			$msg = ' Vul alle velden in.';
+			$msgIcon = 'fa-warning';
+			$msgClass = 'failed';
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -132,13 +189,20 @@
 		<label>CONTACT</label>
 	</div>
 	<div class="section-content flex--column">
-		<div class="input-form">
-			<input type="text" name="person" placeholder="Your Name">
-			<input type="email" name="email" placeholder="Your Email">
-			<input type="text" name="message" placeholder="Your Message...">
-		</div>		
-		
-		<button>SEND</button>
+		<?php if($msg != '') { ?>
+			<div class="alert <?php echo $msgClass;?>">
+				<i class="fa <?php echo $msgIcon;?>"></i><?php echo $msg; ?>
+			</div>
+		<?php } ?>			
+		<form class="input-form" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">		
+			<input type="text" name="name" placeholder="Your Name" value="<?php echo isset($_POST['name']) ? $name : 
+			""; ?>">
+			<input type="text" name="email" placeholder="Your Email" value="<?php echo isset($_POST['email']) ? $email : 
+			""; ?>">
+			<textarea type="text" name="message" placeholder="Your Message..."><?php echo isset($_POST['email']) ? $email : 
+			""; ?></textarea>
+			<button name="submit" type="submit">SEND</button>
+		</form>		
 	</div>
 </div>
 <footer>
