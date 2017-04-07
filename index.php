@@ -11,28 +11,27 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
+<div class="nav-bullets">
+	<ul>
+		<li><a href="#Projects"></a></li>
+		<li><a href="#section-skills"></a></li>
+		<li><a href="#Contact"></a></li>
+	</ul>	
+</div>
 <div class="header">
 	<div class="navbar">
 		<div class="logo">
 			<a href="index.php">Eddy Vinck</a>
 		</div>
 		<div class="navigation">
-			<a href="">Projects</a>
-			<a href="">Skills</a>			
-			<a href="">Language</a>
-			<a href="">Contact</a>
+			<a href="#Projects">Projects</a>
+			<a href="#section-skills">Skills</a>			
+			<!-- <a href="">Language</a> -->
+			<a href="#Contact">Contact</a>
 		</div>		
 	</div>
 </div>
-<div class="nav-bullets">
-<ul>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-</ul>	
-</div>
+
 <div class="section1">
 	<div class="section-greeting">
 	<span>&nbsp</span><label>HALLO</label><span class="typed-cursor">|</span>
@@ -41,7 +40,7 @@
 	<p>Mijn naam is <span class="highlight">Eddy Vinck</span>. Ik ben een software- en web-developer in opleiding, echter heb ik een voorkeur voor web. Voor school heb ik een aantal projecten uitgewerkt en deze zijn op deze pagina te bekijken.</p>
 	</div>
 </div>
-<div class="section-projects IE">
+<div id="Projects" class="section-projects IE">
 	<div class="section-title small-title">
 	<label>IRIDIUM ENTERTAINMENT</label>
 	</div>
@@ -107,7 +106,7 @@
 		</div>
 	</div>
 </div>
-<div class="section-skills">
+<div id="section-skills" class="section-skills">
 	<div class="section-title">
 	<label>SKILLS</label>
 	</div>
@@ -128,7 +127,26 @@
 		</div>	
 	</div>
 </div>
-<script src="" type="text/javascript"></script>
+<div id="Contact" class="section-projects contact">
+	<div class="section-title">
+		<label>CONTACT</label>
+	</div>
+	<div class="section-content flex--column">
+		<div class="input-form">
+			<input type="text" name="person" placeholder="Your Name">
+			<input type="email" name="email" placeholder="Your Email">
+			<input type="text" name="message" placeholder="Your Message...">
+		</div>		
+		
+		<button>SEND</button>
+	</div>
+</div>
+<footer>
+	
+</footer>
+
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 </body>
 <!--
 Licence for programming language images: 
